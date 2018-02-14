@@ -1,0 +1,35 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "A burger logger with MySQL, Node, Express, Handlebars and a homemade ORM (yum!). Follows the MVC design pattern; uses Node and MySQL to query and route data in app, and Handlebars to generate HTML.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iangoodnight/burger.git"
+  },
+  "keywords": [
+    "MySQL",
+    "Node",
+    "Express",
+    "Handlebars",
+    "ORM",
+    "MVC",
+    "burger"
+  ],
+  "author": "Ian Goodnight",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iangoodnight/burger/issues"
+  },
+  "homepage": "https://github.com/iangoodnight/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0"
+  }
+}

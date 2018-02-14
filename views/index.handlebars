@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="container">
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-md-4">
+					<img id="big-burger" src="http://www.freepngimg.com/download/burger/1-2-burger-transparent.png" alt="burger-time">
+				</div>
+				<div class="col-md-8">
+					<h1>It's Friggin' Burger Time!</h1>
+					<p>Welcome to our virtual burger simulator.  With the power to order virtual burgers and eat them virtually, you are sure to have a good time!  Also, remember, virtual burgers are calorie-free!  Don't be shy, order up one right now!</p>
+				</div>
+			</div>
+			<div class="text-center">
+				<form class="create-form">
+					<div class="form-group">
+						<label for="burger">Add a Burger!</label>
+						<input type="text" id="burger" name="name">
+						<button class="btn btn-md btn-warning" type="submit">Submit</button>
+					</div>
+				<form>
+			</div>
+		</div>
+	</div>
+	<div class="container">		
+		<div class="row">
+			<div id="open-menus" class="col-md-6">
+				<h2>Burgers Left For Noms</h2>
+				<ul>
+			  		{{#each burgers}}
+			  			{{#unless this.devoured}}
+			  				<li>
+								<span class="menu">{{this.id}}. {{this.burger_name}}</span>
+								<button class="eat-it btn btn-warning btn-md" data-name={{this.burger_name}} data-id={{this.id}}>Eat it!</button>
+							</li>
+						{{/unless}}
+			  		{{/each}}
+				</ul>	
+			</div>
+			<div id="tickets" class="col-md-6">
+				<h2>Burgers Already Nommed On</h2>
+				<ul>
+			  		{{#each burgers}}
+			  			{{#if this.devoured}}
+			  				<li>
+								<span>{{this.id}}. {{this.burger_name}}</span>
+							</li>
+						{{/if}}
+			  		{{/each}}
+				</ul>
+			</div>
+		</div>			
+	</div>	
+</div>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/assets/javascript/logic.js"></script>
