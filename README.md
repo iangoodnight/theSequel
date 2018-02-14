@@ -1,0 +1,2 @@
+# theSequel
+Sequelized Burger App
